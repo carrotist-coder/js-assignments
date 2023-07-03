@@ -22,7 +22,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-    return width*height;
+    return width * height;
 }
 
 
@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    return radius*2*Math.PI;
+    return radius * 2 * Math.PI;
 }
 
 /**
@@ -55,7 +55,7 @@ function getCicleCircumference(radius) {
  */
 function getAverage(value1, value2) { // >_<
     const av = (value1 + value2) / 2;
-    if (av===Infinity) {
+    if (av === Infinity) {
         return Infinity;
     }
     return av;
@@ -77,7 +77,7 @@ function getAverage(value1, value2) { // >_<
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    return Math.sqrt((x2-x1)**2+(y2-y1)**2)
+    return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 }
 
 /**
@@ -93,7 +93,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-    return (-b)/a;
+    return (-b) / a;
 }
 
 
@@ -115,29 +115,28 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    const pi=Math.PI
-    if (Math.abs(x1)>1 || Math.abs(x2)>1 || Math.abs(y1)>1 || Math.abs(y2)>1) {
+    const pi = Math.PI
+    if (Math.abs(x1) > 1 || Math.abs(x2) > 1 || Math.abs(y1) > 1 || Math.abs(y2) > 1) {
         return 0;
     }
-    if (Math.abs(x1)===1) {
-        if (x2===0) {
-            return pi/2;
+    if (Math.abs(x1) === 1) {
+        if (x2 === 0) {
+            return pi / 2;
         }
-        if (x2===-x1) {
+        if (x2 === -x1) {
             return pi;
         }
         return 0;
     }
-    if (x1===0) {
-        if (Math.abs(x2)===1) {
-            return pi/2;
+    if (x1 === 0) {
+        if (Math.abs(x2) === 1) {
+            return pi / 2;
         }
     }
 
-    if (y1===-y2) {
+    if (y1 === -y2) {
         return pi;
-    }
-    else {
+    } else {
         return 0;
     }
 }
@@ -155,7 +154,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    return value%10;
+    return value % 10;
 }
 
 
@@ -187,8 +186,8 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelipidedDiagonal(a,b,c) {
-    return Math.sqrt(a**2+b**2+c**2);
+function getParallelipidedDiagonal(a, b, c) {
+    return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -197,7 +196,7 @@ function getParallelipidedDiagonal(a,b,c) {
  * @param {number} num
  * @param {number} pow
  * @return {number}
- *  
+ *
  * @example:
  *   1234, 0  => 1234
  *   1234, 1  => 1230
@@ -209,7 +208,7 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    return Number(String(Math.floor(num/(10*pow)))+String(Math.round(num%(10*pow)))); // >_<
+    return Number(String(Math.floor(num / (10 * pow))) + String(Math.round(num % (10 * pow)))); // >_<
 }
 
 /**
@@ -218,7 +217,7 @@ function roundToPowerOfTen(num, pow) {
  *
  * @param {number} n
  * @return {boolean}
- * 
+ *
  * @example:
  *   4 => false
  *   5 => true
@@ -230,17 +229,14 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    /*
-    // >_<
-    if (n%2 !== 0 && n>2) {
-        for (let i = n-2; i > 2; -2) {
+    if (n % 2 !== 0 && n > 2) {
+        for (let i = n - 2; i > 2; i -= 2) {
             if (n % i === 0) {
                 return false;
             }
         }
     }
-    return (n%2 !== 0 || n===2);\
-     */
+    return (n % 2 !== 0 || n === 2);
 }
 
 /**
