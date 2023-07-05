@@ -13,7 +13,7 @@
 /**
  * Returns an area of a rectangle given by width and heigth.
  *
- * @param {numder} width
+ * @param {number} width
  * @param {number} height
  * @return {number}
  *
@@ -44,7 +44,7 @@ function getCicleCircumference(radius) {
 /**
  * Returns an average of two given numbers.
  *
- * @param {numder} value1
+ * @param {number} value1
  * @param {number} value2
  * @return {number}
  *
@@ -53,10 +53,10 @@ function getCicleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(value1, value2) { // >_<
-    const av = (value1 + value2) / 2;
-    if (av === Infinity) {
-        return Infinity;
+function getAverage(value1, value2) {
+    const av = (value1 + value2) / 2
+    if (av >= Number.MAX_VALUE) {
+        return Number.MAX_VALUE;
     }
     return av;
 }
@@ -208,7 +208,7 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    return Number(String(Math.floor(num / (10 * pow))) + String(Math.round(num % (10 * pow)))); // >_<
+    return Math.round(num / (10 ** pow)) * (10 ** pow);
 }
 
 /**
